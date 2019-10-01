@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
 
 const ButtonSelect = (props) => {
+    const { status, onChange } = props;
     return (
         <div className="book-shelf-changer">
-            <select>
+            <select value={status} onChange={onChange}>
                 <option value="move" disabled>Move to...</option>
                 <option value="currentlyReading">Currently Reading</option>
                 <option value="wantToRead">Want to Read</option>
@@ -14,4 +15,8 @@ const ButtonSelect = (props) => {
     )
 }
 
-export default ButtonSelect
+ButtonSelect.defaultProps = {
+    status: 'none'
+}
+
+export default ButtonSelect;

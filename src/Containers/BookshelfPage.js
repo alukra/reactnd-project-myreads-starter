@@ -1,12 +1,12 @@
 import React from 'react';
-import * as BooksAPI from '../Api/BooksAPI';
 import { Link } from 'react-router-dom';
-import Bookshelf from '../Components/Bookshelf'
-import ActionButton from '../Components/ActionButton'
+import Bookshelf from '../Components/Bookshelf';
+import ActionButton from '../Components/ActionButton';
 
 class BookshelfPage extends React.Component {
 
     render() {
+        const { books, handleUpdateBook } = this.props
         return (
             <div className="list-books">
                 <div className="list-books-title">
@@ -14,9 +14,9 @@ class BookshelfPage extends React.Component {
                 </div>
                 <div className="list-books-content">
                     <div>
-                        <Bookshelf title={"Currently Reading"} books={[]} type={"test"} />
-                        <Bookshelf title={"Want to Read"} books={[]} type={"test"} />
-                        <Bookshelf title={"Read"} books={[]} type={"test"} />
+                        <Bookshelf title={"Currently Reading"} books={books} type={"currentlyReading"} handleUpdateBook={handleUpdateBook} />
+                        <Bookshelf title={"Want to Read"} books={books} type={"wantToRead"} handleUpdateBook={handleUpdateBook} />
+                        <Bookshelf title={"Read"} books={books} type={"read"} handleUpdateBook={handleUpdateBook} />
                     </div>
                 </div>
                 <Link to={"/search"} >
@@ -27,4 +27,4 @@ class BookshelfPage extends React.Component {
     }
 }
 
-export default BookshelfPage
+export default BookshelfPage;
