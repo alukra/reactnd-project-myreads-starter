@@ -19,15 +19,18 @@ const Book = (props) => {
                             height: 193,
                             backgroundImage: `url(${book.imageLinks.thumbnail})`
                         }} />
-                        <ButtonSelect status={book.shelf} onChange={handleChange}/>
+                    <ButtonSelect status={book.shelf} onChange={handleChange} />
                 </div>
                 <div className="book-title">{book.title}</div>
-                <div className="book-authors">{book.authors.map((author, index) => {
-                    if (index !== 0)
-                        return <React.Fragment key={index}><br /> {author}</React.Fragment>
-                    else return author
-                })}
-                </div>
+                {book.authors !== undefined ?
+                    <div className="book-authors">{book.authors.map((author, index) => {
+                        if (index !== 0)
+                            return <React.Fragment key={index}><br /> {author}</React.Fragment>
+                        else return author
+                    })}
+                    </div>
+                    : undefined
+                }
             </div>
         </li>
     );
