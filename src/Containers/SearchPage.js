@@ -18,6 +18,10 @@ class SearchPage extends React.Component {
         this.setState({ filteredBooks: [], query: '' })
     }
 
+    /**
+     * handle the input search, search the book and add it to the state
+     * @param {*} event the book that would apply the update
+     */
     handleChange = (event) => {
         this.setState({ query: event.target.value }, () => {
             if (this.state.query === "") {
@@ -34,6 +38,10 @@ class SearchPage extends React.Component {
         })
     }
 
+    /**
+     * make an updated list of books with the bookshelf books and the filtered books
+     * @returns {Array} Merged list of books
+     */
     mergeBooks = () => {
         const { books } = this.props;
         const { filteredBooks } = this.state;

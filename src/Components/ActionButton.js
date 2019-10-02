@@ -7,6 +7,6 @@ const ActionButton = (props) => {
             <button>{label}</button>
         </div>
     );
-}
+};
 
 export default ActionButton;

@@ -11,6 +11,6 @@ const Bookshelf = (props) => {
             </div>
         </div>
     );
-}
+};
 
 export default Bookshelf;

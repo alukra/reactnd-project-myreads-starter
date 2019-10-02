@@ -4,6 +4,10 @@ import ButtonSelect from './ButtonSelect';
 const Book = (props) => {
     const { book, handleUpdateBook } = props;
 
+    /**
+     * handle the target that handleUpdateBook would update
+     * @param {*} event the book that would apply the update
+     */
     const handleChange = (event) => handleUpdateBook(book, event.target.value);
 
     return (
@@ -32,6 +36,6 @@ const Book = (props) => {
             </div>
         </li>
     );
-}
+};
 
 export default Book;

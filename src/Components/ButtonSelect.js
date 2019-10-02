@@ -13,10 +13,10 @@ const ButtonSelect = (props) => {
             </select>
         </div>
     );
-}
+};
 
 ButtonSelect.defaultProps = {
     status: 'none'
-}
+};
 
 export default ButtonSelect;

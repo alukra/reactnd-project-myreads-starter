@@ -24,6 +24,11 @@ class BooksApp extends React.Component {
     this.setState({ books: [] })
   }
 
+  /**
+   *  Updates the bookshelf of the selected book
+   * @param book the book to update
+   * @param status the bookshelft (or not) that is currently the book
+   */
   handleUpdateBook = (book, status) => {
     BooksAPI.update(book, status).then(result => {
       BooksAPI.getAll().then(books => this.setState({ books }))

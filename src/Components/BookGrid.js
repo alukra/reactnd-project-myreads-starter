@@ -10,6 +10,6 @@ const BookGrid = (props) => {
             )}
         </ol>
     );
-}
+};
 
 export default BookGrid;
