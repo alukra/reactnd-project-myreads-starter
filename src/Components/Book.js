@@ -4,9 +4,7 @@ import ButtonSelect from './ButtonSelect';
 const Book = (props) => {
     const { book, handleUpdateBook } = props;
 
-    const handleChange = (event) => {
-        handleUpdateBook(book, event.target.value)
-    }
+    const handleChange = (event) => handleUpdateBook(book, event.target.value);
 
     return (
         <li>
@@ -17,7 +15,7 @@ const Book = (props) => {
                         style={{
                             width: 128,
                             height: 193,
-                            backgroundImage: `url(${book.imageLinks.thumbnail})`
+                            backgroundImage: `url(${book.imageLinks !== undefined ? book.imageLinks.thumbnail : undefined})`
                         }} />
                     <ButtonSelect status={book.shelf} onChange={handleChange} />
                 </div>

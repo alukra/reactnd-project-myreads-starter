@@ -1,5 +1,5 @@
-import BookshelfPage from './BookshelfPage'
-import SearchPage from './SearchPage'
+import BookshelfPage from './BookshelfPage';
+import SearchPage from './SearchPage';
 
 export {
     BookshelfPage,

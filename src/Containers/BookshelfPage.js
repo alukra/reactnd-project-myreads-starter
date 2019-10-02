@@ -6,7 +6,7 @@ import ActionButton from '../Components/ActionButton';
 class BookshelfPage extends React.Component {
 
     render() {
-        const { books, handleUpdateBook } = this.props
+        const { books, handleUpdateBook } = this.props;
         return (
             <div className="list-books">
                 <div className="list-books-title">
@@ -23,7 +23,7 @@ class BookshelfPage extends React.Component {
                     <ActionButton label={"Add a book"} />
                 </Link>
             </div>
-        )
+        );
     }
 }
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const SearchBar = (props) => {
-    const { value, onChange } = props
+    const { value, onChange } = props;
     return (
         <div className="search-books-bar">
             <Link to={"/"}>
@@ -17,7 +17,7 @@ const SearchBar = (props) => {
                 />
             </div>
         </div>
-    )
+    );
 }
 
-export default SearchBar
+export default SearchBar;

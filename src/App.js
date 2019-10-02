@@ -17,7 +17,7 @@ class BooksApp extends React.Component {
   }
 
   componentDidMount() {
-    BooksAPI.getAll().then(books => this.setState({ books }))
+    BooksAPI.getAll().then(books => this.setState({ books }));
   }
 
   componentWillUnmount() {
@@ -27,11 +27,11 @@ class BooksApp extends React.Component {
   handleUpdateBook = (book, status) => {
     BooksAPI.update(book, status).then(result => {
       BooksAPI.getAll().then(books => this.setState({ books }))
-    })
+    });
   }
 
   render() {
-    const { books } = this.state
+    const { books } = this.state;
     return <Router>
       <div className="app">
         <Route path={"/"} exact render={(props) => <BookshelfPage {...props} books={books} handleUpdateBook={this.handleUpdateBook} />} />

@@ -12,7 +12,7 @@ const ButtonSelect = (props) => {
                 <option value="none">None</option>
             </select>
         </div>
-    )
+    );
 }
 
 ButtonSelect.defaultProps = {
